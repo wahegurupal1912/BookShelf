@@ -2,10 +2,16 @@ import React from 'react';
 import { StyleSheet, View, Image, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, Keyboard } from 'react-native';
 
 
-export default class Login extends React.Component {
+export default class LoginScreen extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.tryLogin = this.tryLogin.bind(this);
+    }
 
     async tryLogin() {
         Keyboard.dismiss()
+        this.props.navigation.navigate('Main');
     }
 
     render() {
@@ -42,7 +48,7 @@ export default class Login extends React.Component {
                         <Text style={styles.signUpText}>Do not have an existing account?</Text>
 
                         <TouchableOpacity
-                        onPress={() => this.props.navigation.navigate('SignUp')}
+                        onPress={() => this.props.navigation.navigate('SignUpScreen')}
                         style={styles.signUpButtton}
                         >
                             <Text style={{color: "black", fontWeight: '700', fontSize: 16}}>Sign Up</Text>

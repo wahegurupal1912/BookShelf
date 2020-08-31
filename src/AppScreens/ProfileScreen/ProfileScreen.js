@@ -9,7 +9,7 @@ export default class HomeScreen extends React.Component {
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={{ alignSelf: "center", marginTop: 50 }}>
                         <View style={styles.profileImage}>
-                            <Image source={require("../../assets/Profile/profilepic.jpg")} style={styles.image}></Image>
+                            <Image source={require("../../../assets/Profile/profilepic.jpg")} style={styles.image}></Image>
                         </View>
                         <View style={styles.edit}>
                             <MaterialCommunityIcons name="pencil" color={"#e6e6e6"} size={22} />
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         borderRadius: 100,
+        borderWidth: 1,
         overflow: "hidden"
     },
     edit: {
