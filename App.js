@@ -7,6 +7,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import HomeScreen from './screens/HomeScreen/HomeScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import BookshelfScreen from './screens/BookshelfScreen/BookshelfScreen'
+import LoginScreen from './screens/LoginScreen/LoginScreen'
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -45,6 +46,16 @@ export default function App() {
             tabBarLabel: 'Profile',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="account" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen 
+          name="Login" 
+          component={LoginScreen}
+          options={{
+            tabBarLabel: 'Login',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="book" color={color} size={26} />
             ),
           }}
         />
