@@ -4,36 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-class HomeScreen extends React.Component {
-  render(){
-    return(
-      <View style={styles.container}>
-        <Text>Home</Text>
-      </View>
-    )
-  }
-}
-
-class BookShelfScreen extends React.Component {
-  render(){
-    return(
-      <View style={styles.container}>
-        <Text>My BookShelf</Text>
-      </View>
-    )
-  }
-}
-
-class ProfileScreen extends React.Component {
-  render(){
-    return(
-      <View style={styles.container}>
-        <Text>Profile</Text>
-      </View>
-    )
-  }
-}
+import HomeScreen from './screens/HomeScreen/HomeScreen'
+import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
+import BookshelfScreen from './screens/BookshelfScreen/BookshelfScreen'
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -56,10 +29,10 @@ export default function App() {
           }}
         />
         <Tab.Screen 
-          name="BookShelf" 
-          component={BookShelfScreen}
+          name="Bookshelf" 
+          component={BookshelfScreen}
           options={{
-            tabBarLabel: 'BookShelf',
+            tabBarLabel: 'Bookshelf',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons name="book" color={color} size={26} />
             ),
