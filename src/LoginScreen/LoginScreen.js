@@ -38,9 +38,8 @@ export default class LoginScreen extends React.Component {
                     />
 
                     <TouchableOpacity
-                    testID="login-Button"
                     onPress={this.tryLogin}
-                    style={styles.loginButton}>
+                    style={[styles.button, {backgroundColor: '#30404F'}]}>
                         <Text style={{color: "white", fontWeight: '700', fontSize: 16}}>Login</Text>
                     </TouchableOpacity>
 
@@ -49,8 +48,7 @@ export default class LoginScreen extends React.Component {
 
                         <TouchableOpacity
                         onPress={() => this.props.navigation.navigate('SignUpScreen')}
-                        style={styles.signUpButtton}
-                        >
+                        style={[styles.button, {backgroundColor: '#f3bb12'}]}>
                             <Text style={{color: "black", fontWeight: '700', fontSize: 16}}>Sign Up</Text>
                         </TouchableOpacity>
                     </View>
@@ -90,20 +88,9 @@ const styles = StyleSheet.create({
         marginTop: 20,
         backgroundColor: "#e6e6e6"
     },
-    loginButton: {
-        backgroundColor: '#30404F',
+    button: {
         padding: 10,
         marginTop: 20,
-        width: "80%",
-        height: 50,
-        borderRadius: 10,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    signUpButtton: {
-        backgroundColor: '#f3bb12',
-        padding: 10,
-        marginTop: 10,
         width: "80%",
         height: 50,
         borderRadius: 10,

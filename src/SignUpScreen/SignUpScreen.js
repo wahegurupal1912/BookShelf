@@ -51,13 +51,11 @@ export default class SignUpScreen extends React.Component {
                     <Text style={styles.buttonText}>Create Account</Text>
                 </TouchableOpacity>
 
-
                 <TouchableOpacity
-                style={styles.cancelButton} 
+                style={{marginTop: 20}} 
                 onPress={() => this.props.navigation.navigate('LoginScreen')}>
                     <Text style={styles.cancelButtonText}>Cancel</Text>
                 </TouchableOpacity>
-
             </KeyboardAvoidingView>
         );
     }
@@ -90,7 +88,7 @@ const styles = StyleSheet.create({
         marginLeft: '10%'
     },
     signUpButtton: {
-        backgroundColor: '#f39c12',
+        backgroundColor: '#f3bb12',
         padding: 10,
         marginTop: 20,
         width: "80%",
@@ -103,9 +101,6 @@ const styles = StyleSheet.create({
         color: "black",
         fontWeight: '700',
         fontSize: 16
-    },
-    cancelButton:{
-        marginTop: 20
     },
     cancelButtonText:{
         color: "white",
